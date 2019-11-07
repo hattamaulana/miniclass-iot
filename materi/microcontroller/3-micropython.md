@@ -27,7 +27,9 @@ Lalu bagaimana caranya supaya *micropython* dapat digunakan pada **NodeMCU** ? C
 
 2. Buka Terminal
 
-3. Install esptool menggunakan pip:
+3. Untuk **WINDOWS** silahkan download USB to UART Driver [Disini.](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers.)
+
+4. Install esptool menggunakan pip:
 
    ```bash
    $ pip install esptool
@@ -35,7 +37,7 @@ Lalu bagaimana caranya supaya *micropython* dapat digunakan pada **NodeMCU** ? C
 
    
 
-4. Hapus flash memory pada *nodemcu*.
+5. Hapus flash memory pada *nodemcu*.
 
    ```bash
    $ esptool.py --port /dev/ttyUSB0 erase_flash
@@ -43,7 +45,7 @@ Lalu bagaimana caranya supaya *micropython* dapat digunakan pada **NodeMCU** ? C
 
    
 
-5. Deploy firmware micropython yang telah di download ke nodemcu.
+6. Deploy firmware micropython yang telah di download ke nodemcu.
 
    ```bash
    $ esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect -fm dio 0 esp8266-20170108-v1.8.7.bin
@@ -58,3 +60,4 @@ Lalu bagaimana caranya supaya *micropython* dapat digunakan pada **NodeMCU** ? C
 - [micropython.org](https://micropython.org/)
 - [Dokumentasi micropython](https://docs.micropython.org/)
 - [codepoliten.com](https://www.codepolitan.com/micropython-1-8-telah-rilis-dukungan-pertama-micropython-untuk-esp8266)
+- [instructables.com](https://www.instructables.com/id/Getting-Started-With-MicroPython-on-the-ESP8266/)
