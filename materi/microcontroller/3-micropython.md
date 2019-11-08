@@ -4,6 +4,8 @@ Telah di mention pada materi sebelumnya *micropython* merupakan sebuah project u
 
 *Micropython* pertama kali dirilis pada tahun 2013 yang ditujukan untuk penggunaan ***PyBoard***. Namun sejak versi 1.8 *micropython* telah mendukung untuk digunakan pada platform **ESP** salah satunya pada **NodeMCU**.
 
+Pada saat booting micropython akan menjalankan file ***_boot.py*** untuk melakukan *mount* filesystem pada FlashROM. Dan jika file tersebut tidak tersedia maka module tersebut akan dibuat secara otomatis dibuat oleh system. Setelah berhasil di *mount* system akan mengeksekusi file ***boot.py*** di dalam file tersebut kita dapat melakukan apa yang kita ingin inisiasikan. Untuk program utamanya system akan mengeksekusi file ***main.py***.
+
 
 
 ## Features
@@ -50,8 +52,6 @@ Lalu bagaimana caranya supaya *micropython* dapat digunakan pada **NodeMCU** ? C
    ```bash
    $ esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect -fm dio 0 esp8266-20170108-v1.8.7.bin
    ```
-
-
 
 
 

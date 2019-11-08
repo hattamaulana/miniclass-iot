@@ -34,8 +34,33 @@ Selain menggunakan cara diatas ada cara yang lebih simple untuk digunakan namun 
 
 
 
+## Upload
+
+Lalu bagaimana jika kita ingin menulis program di komputer kita dan mengunggahnya sebagai file ***boot.py***  untuk proses booting atau bahkan sebagai file ***main.py*** untuk process utamanya. Untuk memudahkan tersebut dapat mengikuti langkah-langkah dibawah ini :
+
+```bash
+$ pip install ampy-adafruit
+```
+
+Contoh dari penggunaan dari tools ampy tersebut seperti berikut :
+
+***get***, digunakan untuk melakukan download dari system micropython yang berada di nodemcu.
+
+```bas
+$ ampy --port /dev/ttyUSB0 --baud 115200 get boot.py
+```
+
+***put***, digunakan untuk melakukan upload dari directory active ke system micropython.
+
+```bas
+$ ampy --port /dev/ttyUSB0 --baud 115200 put boot.py
+```
+
+Untuk perintah lebih lengkapnya dapat dibaca di dokumentasi ampy-adafruit
+
 
 
 ## Referensi
 
 - [Dokumentasi rshell](https://github.com/dhylands/rshell)
+- [Dokumentasi ampy-adafruit](https://learn.adafruit.com/micropython-basics-load-files-and-run-code/install-ampy)
